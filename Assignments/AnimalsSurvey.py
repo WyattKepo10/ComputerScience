@@ -1,5 +1,6 @@
 user_input1 = input("What is your favorite animal?\n>")
-print("Wow! " + user_input1 + "? How cool!")
+    # I added all these "Wow" "Woah nice!" stuff because it's positive. 
+print("Wow! " + user_input1 + "? How cool!")   
 user_input2 = input("What noise do they make?\n>")
 print("So they make " + user_input2 + " noise? Sick!")
 user_input3 = input("Where do they live?")
@@ -14,9 +15,10 @@ user_input7 = input("What does the animal do to defend themselves?\n>")
 print("They " + user_input7 + "? Alright.")
 user_input8 = input("What is a fun fact about them?\n>")
 print( user_input8 + "? Sick!")
-user_input9 = input("Can you or you can yo not, get them as a pet?\n>")
+user_input9 = input("Can you or you can you not, get them as a pet?\n>") #Only respond in Can or Cannot
 print( user_input9 + "? dang, alright!")
 user_input10 = input("Last question! Why do you like this animal?\n>")
 print("So you like them because " + user_input10 + "? How interesting...")
+    # Made string 23 and 24 seperate as a way to make this survey more human like... also saved me alot of moving back and forth to check my questions.
 user_input11 = input("So, your favorite animal is " + user_input1 + "? And they make " + user_input2 + " noise? They also live at " + user_input3 + "? And they are colored " + user_input4 + "? I'm correct so far right?\n>")
 print( user_input11 + "? Alright! I'll continue: The animal is a " + user_input5 + ", they eat " + user_input6 + "... Again, gross. And they defend themselves by " + user_input7 + "? And you said that " + user_input8 + "? And you " + user_input9 + " own them as a pet? And you like them because " + user_input10 + "? This... Is awesome! Thank you for taking this survey!")
