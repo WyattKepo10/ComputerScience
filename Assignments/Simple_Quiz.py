@@ -13,6 +13,9 @@
 # .swapcase() inverts the capitalization on each character
 # "Hello World1" > "hELLO wORLD!"
 print("Use no capitalization")
+print("Use no capitalization")
+print("Use no capitalization")
+print("Use no capitalization")
 Question_1 = input("Is Elden Ring the best game ever? Yes or No\n>")
 
 Q2 = input("Is Mr. Ososwki the best techer in STMA High school? Yes or No\n>")
@@ -28,13 +31,14 @@ def tally_score():
     score = 0
     if (Question_1 == "yes"):
         score = score = 1
-    if (Q2=="Yes"):
+    if (Q2=="yes"):
         score = score + 1
-        if (Q3 == 84):
+    if (Q3 == 84):
             score = score + 1
-            if (Q4==1997):
+    if (Q4==1997):
                 score = score + 1
-                if (Q5 == "as much wood as a woodchuck could chuck if a woodchuck could chuck wood"):
-                    score = score + 1
+    if (Q5 == "as much wood as a woodchuck could chuck if a woodchuck could chuck wood"):
+        score = score + 1
+    print("your score is " + str(score) + " out of 5")
                     
 tally_score()
