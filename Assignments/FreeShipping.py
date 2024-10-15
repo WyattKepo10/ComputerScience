@@ -9,7 +9,17 @@
 #  You can use more than one logical operator in a Condition
 #  Use parenthesis to group if needed 
 
+
+
 def free_shipping(prime, cost, age, consent):
-    if prime == ("Yes".upper) and cost >= 25 and (age <= 18 or consent == ("No".upper))  :
+    if (prime == True or cost >= 25) and (age >= 18 or consent == True):
         print("YOU NOW HAVE FREE SHIPPING! CONGRATULATIONS!")
-    
+    else:
+        print("YOU CANNOT HAVE FREE SHIPPING! SORRY!")
+
+
+
+
+
+
+free_shipping(True, 25.00, 18, True)
