@@ -72,12 +72,15 @@ def inside_home():
             print("As you look inside your home, you look to your left and see a desk, and you then look to your right and see a hallway.. Where would you like to explore?")
             print("1. Left")
             print("2. Right")
+            print("3. Go outside. I've seen enough.")
             choice = input(">")
 
             if choice == ("1"):
                 desk()
             elif choice == ("2"):
-                home_hallway()
+                home_hallway_with_mirror()
+            elif choice == ("3"):
+                   outside_home()
             else:
                 print("invalid choice.")
                 inside_home()
@@ -87,12 +90,15 @@ def inside_home2():
             print("As you move back and look around, you see a desk to your left, and you then look to your right and see a hallway. Where would you like to explore?")
             print("1. Left")
             print("2. Right")
+            print("3. Go outside. I've seen enough.")
             choice = input(">")
 
             if choice == ("1"):
                 desk()
             elif choice == ("2"):
-                home_hallway()
+                home_hallway_with_mirror()
+            elif choice == ("3"):
+                   outside_home()
             else:
                 print("Invalid choice.")
                 inside_home2()
@@ -152,13 +158,13 @@ def desk3():
         # Home Hallway Divider
 
 def home_hallway_with_mirror():
-            print("You walk down the hallway to your right and as you move to the end at the hallway you pass by a mirror.")
+            print("You walk down the hallway and as you move to the end at the hallway you pass by a mirror to your side.")
             print("You look into the mirror and see... You.")
             print("You look battered, tired, and roughed up.")
             print("You look so different, yet its still you.")
             print("1. Stare at yourself again.")
             print("2. Keep moving down the hallway")
-            print("3. Go back.")
+            print("3. Move back into the living room.")
 
             choice = input(">")
 
@@ -178,7 +184,7 @@ def home_hallway_with_mirror2():
         print("You look so different, yet its still you.")
         print("1. Stare at yourself again.")
         print("2. Keep moving down the hallway")
-        print("3. Go back.")
+        print("3. Move back into the living room.")
 
         choice = input(">")
 
@@ -219,8 +225,10 @@ def childhood_door():
 
        if choice == ("1"):
               kick_door1()
-       if choice == ("2"):
+       elif choice == ("2"):
               home_hallway()
+       else:
+              print("Invalid choice.")
 
 def parent_door():
        print("As you try to open the door to your childhood room,")
@@ -232,8 +240,10 @@ def parent_door():
 
        if choice == ("1"):
               kick_door2()
-       if choice == ("2"):
+       elif choice == ("2"):
               home_hallway()
+       else:
+              print("Invalid choice.")
         
 def kick_door1():
        print("You try to kick down the door but failed as it stood undamaged.")
@@ -247,6 +257,8 @@ def kick_door1():
               kick_door1()
        elif choice == ("2"):
               home_hallway()
+       else:
+              print("Invalid choice.")
 def kick_door2():
        print("You try to kick down the door but failed as it stood undamaged.")
        print("The door stood dissapointed in you as it has endured your kick.")
@@ -257,12 +269,216 @@ def kick_door2():
        
        if choice == ("1"):
               kick_door2()
-       if choice == ("2"):
+       elif choice == ("2"):
               home_hallway()
+       else:
+            print("Invalid choice.")
        
+def outside_home():
+       print("Checkpoint!")
+       print(" ")
+       print("You go outside and see the city. The sky was dark, and the moon was nowhere to be seen.")
+       print("The city is in ruins. Buildings were destroyed and some were turned into rubble. You could see black smoke coming from multiple points of the city, and you then heard an explosion.")
+       print("You look to the explosion and see laser's shoot through the sky, and when you look up you see... It.")
+       print("The reason why the sky was so dark was because of the massive military spaceship. It spanned acorss the sky and the only light that it made was through the big beam that shot out of its glowing hole.")
+       print("You look around, and then you feel something is watching you.")
+       print("1. Hide.")
+       print("2. Run.")
 
+       choice = input(">")
 
-       
+       if choice == ("1"):
+              blinding_light_1()
+       elif choice == ("2"):
+              Encounter_1()
+       else:
+              print("Invalid choice.")
+              print(" ")
+              outside_home()
 
+def blinding_light_1():
+       print("You tried to hide back into the house but it was too late, It has already spotted you.")
+       print("You try and block the door but the door explodes and you are sent back into the air.")
+       print("Your vision was blurred, and you could feel a cold hand grab your head and lift you up.")
+       print("Before you could see who picked you up, a blinding light flashed into your eyes.")
+       print("You find yourself inside a dark room, full of 1's and 0's.")
+       print("You... Have died.")
+       print(" ")
+       print("Don't give up! You are what decides the fate of us!")
+       print(" ")
+       print("1. Restart from Checkpoint")
+       print("2. Restart from the beggining.")
+       print("3. Quit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              outside_home()
+       elif choice == ("2"):
+              press_start()
+       elif choice == ("3"):
+              menu()       
+       else:
+              print("Invalid choice.")
+              print(" ")
+              blinding_light_1()
+def Encounter_1():
+       print("You run and you are thankful you did as you see a blinding light from behind.")
+       print("You hear the sounds of rubble falling, it must've thought you were inside the house.")
+       print("You run, and you run for miles.")
+       print("You feel your legs shake and you collapse onto a car.")
+       print("As you catch your breath you could hear the sounds of a person begging.")
+       print("You look behind you and find a man on the floor, trying to negotiate with a robot.")
+       print("1. Try and save the man")
+       print("2. Watch.")
+       print("3. Sneak by and run.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              blinding_light_2()
+       elif choice == ("2"):
+              horror_1()
+       elif choice == ("3"):
+              sneaky_1()
+       else:
+              print("Invalid choice.")
+              print(" ")
+              Encounter_1()
+
+def horror_1():
+       print("You peek your eyes over the side of the car as you watch the robot kick the man to the ground.")
+       print("The robot stood 7 feet tall, and it moves Its arm up and points its palm to the man.")
+       print(" 'Wait, no!' The man exclaimed before he got engulfed by a blinding light.")
+       print("You cover your eyes from the light and when you open your eyes you only see that the has man disappeared. What was left behind was only bright sparkles that floats up into the air, flying into the glowing hole of the space ship.")
+       print("The robot's eyes flash green before it went back to blue and walked up with heavy, clanking, footsteps.")
+       print("You watch it leave before moving on ahead, stepping over the spot where the man has disappeared.")
+       print(" ")
+       outside_building_1()
+
+def blinding_light_2():
+       print("You try to save the man.")
+       print("You jump onto the car and jump onto the robot, that stood 7 feet tall, and try to destroy it.")
+       print("Unfortunately, you have underestimated the robots strength, it pulls you off and throws you aside. The man eyes followed you as you fell to the ground.")
+       print("The man quickly tries to run for it but the robot lifts its arm and shoots a blinding light.")
+       print("You close your eyes from the light as you try and get up from the ground.")
+       print("When you open your eyes, you only see the palm of the robot as your vision becomes white, and then black.")
+       print("You. Have suffered the same fate as the man.")
+       print(" ")
+       print("Don't give up! Our future depends on you!")
+       print(" ")
+       print("1. Restart from last checkpoint")
+       print("2. Restart from the beginning")
+       print("3. Exit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              outside_home()
+       elif choice == ("2"):
+              press_start()
+       elif choice == ("3"):
+              menu()  
+       else:
+              print("Invalid choice.")
+              blinding_light_2()
+
+def sneaky_1():
+
+       print("You slowly sneak by the robot and the man. You hide behind rubble and cars as you tried to avoid the eyes of the robot.")
+       print("As you sneaked by, you could hear the scream of the man before it faded away like an echo.")
+       print("...You know you have made the right decision.")
+       print("But could have we saved him?")
+       print(" ")
+       outside_building_1()
+
+def outside_building_1():
+       print("As you walk in the empty and dark streets for what felt like miles, you have finally met your destination.")
+       print("You look up and see a skyscraper that stood miles high.")
+       print("You enter into the building, opening it's broken glass doors.")
+       print(" ")
+       floor_1()
+def floor_1():
+       print("Checkpoint!")
+       print(" ")
+       print("You look around and squint as the light's flicker. Your surroundings look old and dirty, as the wallpaint were scratched up and the ceiling light was close to falling.")
+       print("You look around your surroundings and find: A door infront of you, a large J desk towards your left, and a large pile of rubble that blocked a door to your right.")
+       print("1. Go check the desk towards my left.")
+       print("2. Go open the door infront of me.")
+       print("3. Go check the pile of rubble to my right.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              J_desk()
+       elif choice == ("2"):
+              hallway_1()
+       elif choice == ("3"):
+              pile_of_rubble()
+       else:
+              print("Invalid choice.")
+              print(" ")
+              floor_1()
+
+def pile_of_rubble():
+       print("You walk up to the large pile of rubble, and see it block a doorway to a incredibly dark room.")
+       print("1. Try and move the pile of rubble.")
+       print("2. Go back.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              tiring_1()
+       elif choice == ("2"):
+              floor_1()
+def tiring_1():
+       print("You try and move the massive pile of rubble, one by one.")
+       print("However, moving the pile of rubber was tiring and you suspect that it would take hours to move away the rubble.")
+       print("You have more important things to do!")
+       print("1. Keep moving the pile of rubble.")
+       print("2. Go back.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              tiring_2()
+       elif choice == ("2"):
+              print("As you move back, you could feel the rubble mock you.")
+              floor_1()
+       else:
+              print("Invalid choice.")
+              print(" ")
+              tiring_1()
+
+# Under me is a refrence to Undertale.
+
+def tiring_2():
+       print("Hours go by as you move the rubble away piece by piece, and at the end of it you become a sweating mess.")
+       print("After the hours of hardwork however, the doorway was finally clear to enter.")
+       print("You move into the empty doorway and into the dark room.")
+       print("You try to look around for a light, and you flip a light switch revealing... A dog?")
+       print("'Bark!' he said, before walking away and out the door.")
+       print("You watch the dog walk out the door before you see Its eyes and the rubble you move away glow.")
+       print("The rubble moves up, and with one final 'Bark!' from the glowing eyed dog, the rubble flies towards you.")
+       print("You have... Died?")
+       print(" ")
+       print("...Uh, don't... Give up?")
+       print(" ")
+       print("1. Restart from the last checkpoint")
+       print("2. Restart from the beginning")
+       print("3. Exit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              floor_1()
+       elif choice == ("2"):
+              press_start()
+       elif choice == ("3"):
+              menu()
+       else:
+              print("Invalid choice.")
+              print(" ")
+              tiring_2()
 
 menu()
