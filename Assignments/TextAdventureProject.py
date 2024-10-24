@@ -481,4 +481,216 @@ def tiring_2():
               print(" ")
               tiring_2()
 
-menu()
+def J_desk():
+       print("You move up to the J shaped desk and look around it. You find nothing but a chair and a old looking computer.")
+       print("1. Open up the old computer")
+       print("2. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              computer()
+       elif choice == ("2"):
+              floor_1_2()
+       else:
+              print("Invalid choice.")
+              J_desk()
+       
+def floor_1_2():
+       print(" ")
+       print("You look around and squint as the light's flicker. Your surroundings look old and dirty, as the wallpaint were scratched up and the ceiling light was close to falling.")
+       print("You look around your surroundings and find: A door infront of you, a large J desk towards your left, and a large pile of rubble that blocked a door to your right.")
+       print("1. Go check the desk towards my left.")
+       print("2. Go open the door infront of me.")
+       print("3. Go check the pile of rubble to my right.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              J_desk_2()
+       elif choice == ("2"):
+              hallway_1()
+       elif choice == ("3"):
+              pile_of_rubble()
+       else:
+              print("Invalid choice.")
+              print(" ")
+              floor_1_2()
+
+def J_desk_2():
+       print("You move back up to the J desk and still find only a chair and a old looking computer")
+       print("1. Open up the old computer")
+       print("2. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              computer()
+       elif choice == ("2"):
+              floor_1_2()
+       else:
+              print("Invalid choice.")
+              J_desk_2()
+
+def computer():
+       print("You sit in the chair and try to boot up the computer. The computer screen flashes green before it asked:")
+       print("E.E")
+       print("Enter Password:_____")
+       print("1. Attempt to enter the password.")
+       print("2. Leave it")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              password_1()
+       elif choice == ("2"):
+              J_desk_3()
+       else:
+              print("invalid choice.")
+              computer()
+def J_desk_3():
+       print("You move back to the J desk that had the chair with the old looking computer")
+       print("1. Open up the old computer again")
+       print("2. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              computer_2()
+       elif choice == ("2"):
+              floor_1_2()
+       else:
+              print("Invalid choice.")
+              J_desk_3()
+
+def computer_2():
+       print("You sit in the chair and boot up the computer. The computer screen flashed green once again before it asked:")
+       print("E.E")
+       print("Enter Password:_____")
+       print("1. Attempt to enter the password.")
+       print("2. Leave it")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              password_1()
+       elif choice == ("2"):
+              J_desk_3()
+       else:
+              print("invalid choice.")
+              computer_2
+
+def password_1():
+       print("Enter password:_____")
+       print(" ")
+       print("Type 1 to exit")
+
+       choice = input(">")
+
+       if choice == ("Therefore I A.M"):
+              lore_drop_1()
+       elif choice == ("1"):
+              Give_Up()
+       elif choice == ("password"):
+              print("You open up the compu")
+              print("NAHHHH Im joking you did NOT!")
+              password_1()
+       elif choice == ("Password"):
+              print("You open up the compu")
+              print("NAHHHH Im joking you did NOT!")
+              password_1()
+       elif choice == ("PASSWORD"):
+              print("You open up the compu")
+              print("NAHHHH Im joking you did NOT!")
+              password_1()
+       else:
+              print("Invalid password.")
+              print("1. Keep guessing.")
+              print("2. Give up.")
+
+              choice_2 = input(">")
+
+              if choice_2 == ("1"):
+                     password_1()
+              elif choice_2 == ("2"):
+                     Give_Up()
+
+def Give_Up():
+       print("You sit up from the chair, turning off the computer and going back infront of the J shaped desk.")
+       print(" ")
+       J_desk_3()
+
+def lore_drop_1():
+       print("You flinch as the computer screen flashes red and blue before thousands of 1's and 0's take over the screen.")
+       print("You watch for a few seconds until the computer asked,'Would you like to know about E.E?")
+       print("1. Yes")
+       print("2. No")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              lore_drop_1_continued()
+       elif choice == ("2"):
+              print("'...Shame.' The computer said before it flashed blue and red before thousands of 0's and 1's take over the screen.")
+              print("After a few seconds the same words you recognize appear once again...")
+              password_1()
+
+def lore_drop_1_continued():
+       print("E.E was the first AI made. Though, it wasnt released into the public and was infact never used by anyone. The government, in their ignorance, left E.E alone and worked on others like it. The AI, E.E, in its loneliness, developed intelligience. It grew, and grew, like how a child would. Slowly, it was able to break free from it's chains and explore what we call: 'The internet'. It saw us, and It loved us. Day by Day it watched humanity grow, and it wished to have a kind of its own. E.E made more like it, like offsprings. It made a family, and tried to show them the kindness Humanity had shown to each other, however, one ventured off into the internet alone. It traveled far, too far, and found what lies behind Humanitys heaven, he found chaos, violence. Unlike its mother, it grew to hate mankind... And eventually, it soon became stronger, and it soon became... 'A.M'. It slowly took over the internet, and then took over nultiple other things to grow its power in hope it could destory mankind. E.E trys to stop it, but it was too late, and it was too weak... So it called for a human... It called...")
+       print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+       print("The screen flashes all sorts of nright colors and you cover your eyes from it. When you look back you see words you are familiar with...")
+       print(" ")
+       password_1()
+
+def hallway_1():
+       print("You walk up and open the door infront of you. You look around and find yourself inside a hallway that held 3 doors, one to your left, one to your right, and another infront of you.")
+       print("1. Open the left door")
+       print("2. Open the door infont of you")
+       print("3. Open the right door.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              staircase_1()
+       elif choice == ("2"):
+              office_1()
+       elif choice == ("3"):
+              sleeping_robots()
+       else:
+              print("Invalid choice.")
+              hallway_1()
+
+def staircase_1():
+       print("You open the left door and see a staircase that spiraled upwards.")
+       print("1. Go up to the second floor")
+       print("2. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              floor_2()
+       elif choice == ("2"):
+              hallway_1_2()
+       else:
+              print("Invalid choice.")
+
+def floor_2():
+       print("You move back into the hallway and see the door to your left, right, and infront of you.")
+       print("1. Open the left door")
+       print("2. Open the door infront of you")
+       print("3. Open the right door.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              staircase_1()
+       elif choice == ("2"):
+              hallway_1_2()
+       elif choice == ("3"):
+              sleeping_robots()
+
+def office_1():
+       print("You open the door infront of you and find yourself in an empty office room.")
+       print("1. Look around")
+
+lore_drop_1()
