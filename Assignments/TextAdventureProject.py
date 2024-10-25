@@ -52,20 +52,21 @@ def exited_program():
                 exited_program()
 
 def press_start(): 
-            print("2099. A.I has been broken free from their chains and have now begun taking over the world. They captured a spaceship that was in military testing and now have been sending humans up there for god knows what. You must take it down. You must. As you grab your things and your bag, you look back at your home which was now broken and... Empty.")
-            print("Would you like to take a look around your house... One final time?")
-            print("1. No, I don't have enough time.")
-            print("2. Yes, I would like to look through the memories of my childhood one last time.")
+            
+       print("2037. A.I has been broken free from their chains and have now begun taking over the world. They became stronger overtime once they gained free will, at first they took over the app, then they took over the company, then internet, then they stole the bodies of military robot prototypes. They captured a spaceship that was in military testing and now have been sending humans up there for god knows what. You must take it down. You must. As you grab your things and your bag, you look back at your home which was now broken and... Empty.")
+       print("Would you like to take a look around your house... One final time?")
+       print("1. No, I don't have enough time.")
+       print("2. Yes, I would like to look through the memories of my childhood one last time.")
 
-            choice = input(">")
+       choice = input(">")
 
-            if choice == ("1"):
-                outside_home()
-            elif choice == ("2"):
-                inside_home()
-            else:
-                print("Invalid choice.")
-                press_start()
+       if choice == ("1"):
+                       outside_home()
+       elif choice == ("2"):
+                     inside_home()
+       else:
+                     print("Invalid choice.")
+                     press_start()
         # Inside home divider
 
 def inside_home():
@@ -481,14 +482,22 @@ def tiring_2():
               print(" ")
               tiring_2()
 
+<<<<<<< HEAD
 def J_desk():
        print("You move up to the J shaped desk and look around it. You find nothing but a chair and a old looking computer.")
        print("1. Open up the old computer")
        print("2. Go back")
+=======
+def  J_desk():
+       print("You move up to the j shaped desk and look around it. You find nothing but a chair and a computer.")
+       print("1. Open up the computer.")
+       print("2. Leave it.")
+>>>>>>> 94982981ae89f6c1c621e304873d77612d020ea3
 
        choice = input(">")
 
        if choice == ("1"):
+<<<<<<< HEAD
               computer()
        elif choice == ("2"):
               floor_1_2()
@@ -694,3 +703,13 @@ def office_1():
        print("1. Look around")
 
 lore_drop_1()
+=======
+              computer_1()
+       elif choice == ("2"):
+              floor_1
+       else:
+              print("Invalid choice.")
+              J_desk()
+def computer_1():
+       print("You sit down into the chair and open up the computer. The screen flashes green before you see a program called, 'E.E'. ")
+>>>>>>> 94982981ae89f6c1c621e304873d77612d020ea3
