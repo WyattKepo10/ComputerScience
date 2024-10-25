@@ -351,7 +351,7 @@ def horror_1():
        print("You peek your eyes over the side of the car as you watch the robot kick the man to the ground.")
        print("The robot stood 7 feet tall, and it moves Its arm up and points its palm to the man.")
        print(" 'Wait, no!' The man exclaimed before he got engulfed by a blinding light.")
-       print("You cover your eyes from the light and when you open your eyes you only see that the has man disappeared. What was left behind was only bright sparkles that floats up into the air, flying into the glowing hole of the space ship.")
+       print("You cover your eyes from the light and hear the man scream, before the scream faded away like an echo. When you open your eyes you only see that the has man disappeared. What was left behind was only bright sparkles that floats up into the air, flying into the glowing hole of the space ship.")
        print("The robot's eyes flash green before it went back to blue and walked up with heavy, clanking, footsteps.")
        print("You watch it leave before moving on ahead, stepping over the spot where the man has disappeared.")
        print(" ")
@@ -445,7 +445,7 @@ def tiring_1():
               tiring_2()
        elif choice == ("2"):
               print("As you move back, you could feel the rubble mock you.")
-              floor_1()
+              floor_1_2()
        else:
               print("Invalid choice.")
               print(" ")
@@ -482,22 +482,14 @@ def tiring_2():
               print(" ")
               tiring_2()
 
-<<<<<<< HEAD
 def J_desk():
        print("You move up to the J shaped desk and look around it. You find nothing but a chair and a old looking computer.")
        print("1. Open up the old computer")
        print("2. Go back")
-=======
-def  J_desk():
-       print("You move up to the j shaped desk and look around it. You find nothing but a chair and a computer.")
-       print("1. Open up the computer.")
-       print("2. Leave it.")
->>>>>>> 94982981ae89f6c1c621e304873d77612d020ea3
 
        choice = input(">")
 
        if choice == ("1"):
-<<<<<<< HEAD
               computer()
        elif choice == ("2"):
               floor_1_2()
@@ -596,7 +588,7 @@ def password_1():
 
        choice = input(">")
 
-       if choice == ("Therefore I A.M"):
+       if choice == ("I think, therefore I AM"):
               lore_drop_1()
        elif choice == ("1"):
               Give_Up()
@@ -656,6 +648,7 @@ def hallway_1():
        print("1. Open the left door")
        print("2. Open the door infont of you")
        print("3. Open the right door.")
+       print("4. Go back")
 
        choice = input(">")
 
@@ -665,6 +658,8 @@ def hallway_1():
               office_1()
        elif choice == ("3"):
               sleeping_robots()
+       elif choice == ("4"):
+              floor_1_2()
        else:
               print("Invalid choice.")
               hallway_1()
@@ -683,33 +678,226 @@ def staircase_1():
        else:
               print("Invalid choice.")
 
-def floor_2():
-       print("You move back into the hallway and see the door to your left, right, and infront of you.")
+def hallway_1_2():
+       print("You move out the door and back into the Hallway. You survey your surroundings again and see the door to your left, right, and infront of you.")
        print("1. Open the left door")
        print("2. Open the door infront of you")
        print("3. Open the right door.")
-
+       print("4. Go back.")
        choice = input(">")
 
        if choice == ("1"):
               staircase_1()
        elif choice == ("2"):
-              hallway_1_2()
+              office_1()
        elif choice == ("3"):
               sleeping_robots()
+       elif choice == ("4"):
+              floor_1_2()
 
 def office_1():
        print("You open the door infront of you and find yourself in an empty office room.")
        print("1. Look around")
+       print("2. Go back")
 
-lore_drop_1()
-=======
-              computer_1()
+       choice = input(">")
+
+       if choice == ("1"):
+              nothing_1()
        elif choice == ("2"):
-              floor_1
+              hallway_1_2()
        else:
               print("Invalid choice.")
-              J_desk()
-def computer_1():
-       print("You sit down into the chair and open up the computer. The screen flashes green before you see a program called, 'E.E'. ")
->>>>>>> 94982981ae89f6c1c621e304873d77612d020ea3
+              office_1()
+def nothing_1():
+       print("You find nothing inside the office room.")
+       print("1. Keep looking.")
+       print("2. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              nothing_1_2()
+       elif choice == ("2"):
+              hallway_1_2()
+def nothing_1_2():
+       print("You find nothing inside the office room.")
+       print("1. Keep looking.")
+       print("2. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              nothing_1_3()
+       elif choice == ("2"):
+              hallway_1_2()
+def nothing_1_3():
+       print("You find a book named 'I have no mouth, and I must scream.'")
+       print("Inside the book you found a note, with the words 'I think, therefore I AM'.")
+       print("1. Keep looking around")
+       print("2. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              nothing_1_4()
+       elif choice == ("2"):
+              hallway_1_2()
+       else:
+              print("Invalid choice.")
+              nothing_1_3()
+def nothing_1_4():
+       print("You find nothing.")
+       print("1. Keep looking")
+       print("2. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              nothing_1_4()
+       elif choice == ("2"):
+              hallway_1_2()
+       else:
+              print("Invalid choice.")
+              nothing_1_4()
+
+
+def sleeping_robots():
+       print("You open the door to the right of you and find a dark room. You look around and step forward, however your foot had hit something metal. You look down and see a dead robot with its legs and an arm missing. You survery your surroundings and find out you are in a room full of charging robots.")
+       print("1. Investigate the robots.")
+       print("2. Go back")
+
+       choice = input(">")
+       
+       if choice == ("1"):
+              sleeping_robots1()
+       elif choice == ("2"):
+              hallway_1_2()
+       else:
+              print("Invalid choice.")
+              sleeping_robots()
+
+def sleeping_robots1():
+       print("You kneel down and mess around with the broken robot. You feel arount the robot and found a panel inside its back. You open up the panel and find dozens of complicated wires inside.")
+       print("You move around the wiring and find something beating inside the robot, you take a closer look and find a glowing ball that kept pumping like a heart.")
+       print("1. Keep investigating the robots.")
+       print("2. Go back.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              blinding_light_room()
+       elif choice ("2"):
+              print("You stand up with the new knowledge you have learned about the robot and walk out the room.")
+              print(" ")
+              hallway_1_2()
+       else:
+              print("Invalid choice.")
+              sleeping_robots1()
+
+def blinding_light_room():
+       print("You pushed your luck. As you mess around with the broken robot even more, it started shaking. You watch the robot's eyes start flashing red and blue, and it let out a alarm like a scream. The robots inside the room turn on as their eyes glow blue before turning to you.")
+       print("You try to run but you trip as you felt something grab your ankle. You look down and see the broken robot hold onto your ankle as its eyes glowed red.")
+       print("You look up and see the dozen robots point their palm to you. Their palms glow before you become engulfed in a blinding light.")
+       print("You have died.")
+       print(" ")
+       print("Don't give up! Our fate rests upon your hands.")
+       print(" ")
+       print("1. Restart from last checkpoint")
+       print("2. Restart from the beginning")
+       print("3. Exit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              floor_1()
+       elif choice == ("2"):
+              press_start()
+       elif choice == ("3"):
+              menu()
+       else:
+              print("Invalid choice.")
+              blinding_light_room()
+
+
+def floor_2():
+       print("You move up the stairs and find yourself on the second floor. You look around and see that you are in another hallway.")
+       print("You find a door to your left and to your right with an elevator infront of you.")
+       print("1. Open the left door")
+       print("2. Open the right door")
+       print("3. Go into the elevator")
+       print("4. Go back.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              planning_room()
+       elif choice == ("2"):
+              print("You open the door to the right and find that the room inside is covered in piles of rubble.")
+              print("The massive amount of rubble blocked your way into the room.")
+              print("Thus, you close the door and move back to the back of the hallway.")
+              floor_2_2()
+       elif choice == ("3"):
+              print("You go into the elevator and press the button labeled: 'roof' and feel the elevator creakingly move up.")
+              roof_1()
+       elif choice == ("4"):
+              print("You go back and move down the stairs.")
+              hallway_1_2()
+       else:
+              print("Invalid choice.")
+              floor_2()
+
+def floor_2_2():
+       print("You find a door to your left and to your right with an elevator infront of you.")
+       print("1. Open the left door")
+       print("2. Open the right door")
+       print("3. Go into the elevator")
+       print("4. Go back.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              planning_room()
+       elif choice == ("2"):
+              print("You open the door to the right and find that the room inside is covered in piles of rubble.")
+              print("The massive amount of rubble blocked your way into the room.")
+              print("Thus, you close the door and move back to the back of the hallway.")
+              floor_2_2()
+       elif choice == ("3"):
+              print("You go into the elevator and press the button labeled: 'roof' and feel the elevator creakingly move up.")
+              roof_1()
+       elif choice == ("4"):
+              print("You go back and move down the stairs.")
+              hallway_1_2()
+       else:
+              print("Invalid choice.")
+              floor_2_2()
+       
+def planning_room():
+       print("You open the door to your left and find yourself in a room that held a big round desk in the middle.")
+       print("You look around and see a massive whiteboard in the middle.")
+       print("1. Read the whiteboard")
+       print("2. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              whiteboard_1()
+       elif choice == ("2"):
+              floor_2_2()
+
+def whiteboard_1():
+       print("You read the whiteboard. It had drawn symbols, with arrows pointed in every direction. What truly caught your attention, was a big X labeled: 'Meeting point.'.")
+       print("1. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              planning_room()
+       else:
+              print("Invalid choice.")
+              whiteboard_1
+
+def roof_1():
+
+
