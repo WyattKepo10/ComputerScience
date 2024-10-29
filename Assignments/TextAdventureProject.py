@@ -888,6 +888,7 @@ def planning_room():
 
 def whiteboard_1():
        print("You read the whiteboard. It had drawn symbols, with arrows pointed in every direction. What truly caught your attention, was a big X labeled: 'Meeting point.'.")
+       print("The X was surrounded by drawn trees with a badly drawn black smoke coming from the X.")
        print("1. Go back")
 
        choice = input(">")
@@ -899,5 +900,34 @@ def whiteboard_1():
               whiteboard_1
 
 def roof_1():
+       print("The elevator stopped and you exit out the elevator.")
+       print("You look up and see the military space ship that covered the sky for hundreds of miles, it's door was open and its stairs was placed down onto the edge of the roof, as if it was calling for you.")
+       print("You walk forward and see a skeleton that hugged a laser blaster.")
+       print("1. Take the laser blaster and head to the ship [Warning, doing this will lock you out of past choices]")
+       print("2. Don't take the laser blaster and head to the ship [Warning, doing this will lock you out of past choices]")
+       print("3. Go back")
 
+       choice = input(">")
 
+       if choice == ("1"):
+              spaceship_with_l()
+       elif choice == ("2"):
+              spaceship_without_l()
+       elif choice == ("3"):
+              print("You head back into the elevator.")
+              print("You press the button labeled '2' and you hear the elevator creak before it started moving down.")
+              print("You exit out the elevator once it stopped and walked to the back of the hallway.")
+              floor_2_2()
+def spaceship_with_l():
+       print(" ")
+       print("Checkpoint!")
+       print(" ")
+       print("You take the laser blaster from the skeleton, its arm held onto the blaster so you shake it off and swipe some dust away before walking up the stairs and into the spaceship.")
+       print("You enter the spaceship and hear the door behind you close. The room becomes very dark to the point where you cant see anything.")
+       print("1. Feel around")
+       print("2. Walk aimlesly")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              
