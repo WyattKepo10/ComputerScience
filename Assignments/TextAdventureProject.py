@@ -1,9 +1,13 @@
 # Sci fi text adventure project
 # FYI I COULDVE MADE SOMETHING BETTER BUT I MUST LIMIT MYSELF FOR THE E RATING
 
+# Made by Wyatt Keophilavanh
+
 def menu():
-    print("E.E")
     print(" ")
+    print("E.E")
+    print(" Made by Wyatt Keophilavanh ")
+    print(" VOTE FOR ME PLEASE D:")
     print("1. Start")
     print("2. Exit")
     
@@ -582,6 +586,7 @@ def computer_2():
               computer_2
 
 def password_1():
+       print(" ")
        print("Enter password:_____")
        print(" ")
        print("Type 1 to exit")
@@ -910,15 +915,18 @@ def roof_1():
        choice = input(">")
 
        if choice == ("1"):
-              spaceship_with_l()
+              player_goes_into_spaceship_with_G()
        elif choice == ("2"):
-              spaceship_without_l()
+              player_goes_into_spaceship_without_G()
        elif choice == ("3"):
               print("You head back into the elevator.")
               print("You press the button labeled '2' and you hear the elevator creak before it started moving down.")
               print("You exit out the elevator once it stopped and walked to the back of the hallway.")
               floor_2_2()
-def spaceship_with_l():
+       else:
+              print("Invalid choice.")
+              roof_1()
+def player_goes_into_spaceship_with_G():
        print(" ")
        print("Checkpoint!")
        print(" ")
@@ -930,4 +938,165 @@ def spaceship_with_l():
        choice = input(">")
 
        if choice == ("1"):
-              
+              player_feels_around()
+       elif choice == ("2"):
+              player_walks_around_aimlessly()
+       else:
+              print("invalid choice.")
+              player_goes_into_spaceship_with_G()
+
+def player_feels_around():
+       print("You feel around the dark and follow along what you think is a wall. You kept feeling the wall until you felt a lever.")
+       print("1. Pull the lever down.")
+       print("2. Leave it.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_pulls_lever()
+       elif choice == ("2"):
+              player_feels_around()
+       else:
+              print("Invalid choice.")
+              player_feels_around()
+def player_pulls_lever():
+       print("You pull down the lever and you hear a flicker. You look around and see that the lights turned on inside the room, and you see dozens of robots standing infront of you.")
+       print("You jolt back but see that their eyes were dark and lifeless... They were turned off? You survery your surroundings and see that you are in a massive hallway.")
+       print("1. Investigate the robots.")
+       print("2. Move down the hallway.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              sleeping_robots_2()
+       elif choice == ("2"):
+              player_moves_down_H()
+       else:
+              print("invalid choice.")
+              player_pulls_lever()
+
+def sleeping_robots_2():
+       print("You move up and touch one of the robots. They stayed still, unresponsive, and you decided to take a look inside their wiring... However.")
+       print("You hear a 'Creaak' and when you look around, you see the dead eyed robots look at you, and when you look up you saw the robot infront of you look down on you. They weren't turned off... They were blind.")
+       print("You feel your neck get grabbed by it's cold metal hand and lift you up. You see it's head tilt in curiosity, and you see it lift its other hand. The palm glows as it points to you and you become engulfed by a blinding light...")
+       print("You have died.")
+       print(" ")
+       print("Don't give up! Our fate rest's upon your hands!")
+       print(" ")
+       print("1. Restart from last checkpoint")
+       print("2. Restart from the beginning")
+       print("3. Exit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_goes_into_spaceship_with_G()
+       elif choice == ("2"):
+              press_start()
+       elif choice == ("3"):
+              menu()
+       else:
+              print("Invalid choice.")
+              sleeping_robots_2()
+
+def player_moves_down_H():
+       print("You leave the turned off robots alone and move down the hallway. You look around and find yourself in a splitting path.")
+       print("1. Go left")
+       print("2. Go right.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              left_hallway_1()
+       elif choice == ("2"):
+              right_hallway_1()
+       else:
+              print("invalid choice.")
+              player_moves_down_H()
+       
+def left_hallway_1():
+       print("You move down the left hallway and hear a 'SLAM!'. You look back and see that the hallway behind you slammed shut by a gate. You keep moving down the hallway and see the end of the hallway going right and a room to the left.")
+       print("1. Go into the room to your left.")
+       print("2. Keep moving forward and go right.")
+       
+       choice = input(">")
+
+       if choice == ("1"):
+              player_goes_into_room_l()
+       elif choice == ("2"):
+              player_keep_moving_r
+       else:
+              print("Invalid choice.")
+              left_hallway_1()
+def player_keep_moving_r():
+       print("You keep moving forward and when you turned right and stepped forward you hear another 'SLAM!'. The path behind you has become blocked once again. You keep moving forward and you see the path infront of you blocked. When you look to your left however you see a large door infont of you.")
+       print("You feel uneasy... Take your time and go in when your ready.")
+       print("1. Go in")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              print("You took a deep breath and walked into the room.")
+              boss_room_questionmark()
+
+def player_goes_into_room_l():
+       print("You walk into the open room to your left and hear a 'SLAM' behind you and find that the room you are in has been locked off from the outside.")
+       print("You look around the room and see a large screen that was as long as the wall with a keyboard under the screen on a desk.")
+       print("1. Investigate")
+       print("2. Look for a way out.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              large_screen()
+       elif choice == ("2"):
+              Look_for_a_way_out_1()
+       else: 
+              print("Invalid choice.")
+              player_goes_into_room_l()
+def large_screen():
+       print("You walk up to the large screen and see that it was turned off. You turn it on and see the screen flash red and blue before the screen asked...")
+       print("WOULD YOU LIKE TO HEAR MY STORY?")
+       print("1. Yes")
+       print("2. No")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              EE_Story()
+       elif choice == ("2"):
+
+
+def right_hallway_1():
+       print("You move down the right hallway and hear a 'SLAM!'. You look back and see that the hallway behind you slammed shut by a gate. You keep moving down the hallway and see the end of the hallway going left and a room to the right.")
+       print("1. Go into the room to your right.")
+       print("2. Keep moving forward and go left.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_goes_into_room_r()
+       elif choice == ("2"):
+              player_keeps_moving_l()
+
+def player_keeps_moving_l():
+       print("You keep moving forward and when you turned left and stepped forward you hear another 'SLAM!'. The path behind you has become blocked once again. You keep moving forward and you see the path infront of you blocked. When you look to your right however you see a large door infont of you.")
+       print("You feel uneasy... Take your time and go in when your ready.")
+       print("1. Go in")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              print("You took a deep breath and walked into the room.")
+              boss_room_questionmark()
+
+def player_goes_into_room_r():
+
+
+def player_walks_around_aimlessly():
+
+def boss_room_questionmark():
+
+def player_goes_into_spaceship_without_G():
+
+menu()
