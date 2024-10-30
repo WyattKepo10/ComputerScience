@@ -71,7 +71,7 @@ def press_start():
        else:
                      print("Invalid choice.")
                      press_start()
-# vvv Future definitions with the "2" infront of their name will be when the player goes back, for constitency reasons.
+# vvv Future definitions with the "2" infront of their name will be when the player goes back, for constitency reasons. Either that it continues the segment, i apologize if you get confused later on i had tunnel vision tyu=ping out all of this D:
 def inside_home():
             print("As you look inside your home, you look to your left and see a desk, and you then look to your right and see a hallway.. Where would you like to explore?")
             print("1. Left")
