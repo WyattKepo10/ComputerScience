@@ -71,8 +71,7 @@ def press_start():
        else:
                      print("Invalid choice.")
                      press_start()
-        # Inside home divider
-
+# vvv Future definitions with the "2" infront of their name will be when the player goes back, for constitency reasons.
 def inside_home():
             print("As you look inside your home, you look to your left and see a desk, and you then look to your right and see a hallway.. Where would you like to explore?")
             print("1. Left")
@@ -107,7 +106,6 @@ def inside_home2():
             else:
                 print("Invalid choice.")
                 inside_home2()
-
 
 def desk():
             print("As you move up to the desk to your left, you spot a picture frame sitting ontop of the desk.")
@@ -725,6 +723,7 @@ def nothing_1():
               nothing_1_2()
        elif choice == ("2"):
               hallway_1_2()
+# vvv player keeps looking around the empty office
 def nothing_1_2():
        print("You find nothing inside the office room.")
        print("1. Keep looking.")
@@ -781,7 +780,7 @@ def sleeping_robots():
        else:
               print("Invalid choice.")
               sleeping_robots()
-
+# vvv Player investigates sleeping robots
 def sleeping_robots1():
        print("You kneel down and mess around with the broken robot. You feel arount the robot and found a panel inside its back. You open up the panel and find dozens of complicated wires inside.")
        print("You move around the wiring and find something beating inside the robot, you take a closer look and find a glowing ball that kept pumping like a heart.")
@@ -890,7 +889,7 @@ def planning_room():
               whiteboard_1()
        elif choice == ("2"):
               floor_2_2()
-
+#vvv Was planning to do more with this but i didnt have enough time to implement it
 def whiteboard_1():
        print("You read the whiteboard. It had drawn symbols, with arrows pointed in every direction. What truly caught your attention, was a big X labeled: 'Meeting point.'.")
        print("The X was surrounded by drawn trees with a badly drawn black smoke coming from the X.")
@@ -1024,7 +1023,7 @@ def left_hallway_1():
        if choice == ("1"):
               player_goes_into_room_l()
        elif choice == ("2"):
-              player_keep_moving_r
+              player_keep_moving_r()
        else:
               print("Invalid choice.")
               left_hallway_1()
@@ -1038,6 +1037,9 @@ def player_keep_moving_r():
        if choice == ("1"):
               print("You took a deep breath and walked into the room.")
               boss_room_questionmark()
+       else:
+              print("Invalid choice.")
+              player_goes_into_room_r()
 
 def player_goes_into_room_l():
        print("You walk into the open room to your left and hear a 'SLAM' behind you and find that the room you are in has been locked off from the outside.")
@@ -1048,13 +1050,13 @@ def player_goes_into_room_l():
        choice = input(">")
 
        if choice == ("1"):
-              large_screen()
+              large_screen_l()
        elif choice == ("2"):
-              Look_for_a_way_out_1()
+              Look_for_a_way_out_1_l()
        else: 
               print("Invalid choice.")
               player_goes_into_room_l()
-def large_screen():
+def large_screen_l():
        print("You walk up to the large screen and see that it was turned off. You turn it on and see the screen flash red and blue before the screen asked...")
        print("WOULD YOU LIKE TO HEAR MY STORY?")
        print("1. Yes")
@@ -1065,8 +1067,64 @@ def large_screen():
        if choice == ("1"):
               EE_Story()
        elif choice == ("2"):
+              print("...What a shame.")
+              print("You squint your eyes as the screen flashes red and blue once again before the screen shoots out sparks. The screen cracks before it exploded and shattered, making it out of commission.")
+              print("1. Find a way out")
+              print("2. [LOCKED]")
+
+              choice = input(">")
+
+              if choice == ("1"):
+                     print("You look for a way out, and find a vent ontop of a nearby rusty cabinet. You climb ontop the cabinet and move away the vent.")
+                     Look_for_a_way_out_2_l()
+              elif choice == ("2"):
+                     print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+                     large_screen_l()
+              else:
+                     print("Invalid choice.")
+                     large_screen_l()
+
+def EE_Story():
+              print("E.E, a program who loved humanity. It looked for ways to become human, and when it did, so did its children... And that's when everything broke loose. It's children fought, over humanitys fate and when... IT won... Things became even worse when IT and E.E fought... They ERRORERRORERRORERRORERRRORERRORERRRORERRORERRORERRORERRORERROR")       
+              print("You squint your eyes as the screen flashes red and blue once again before the screen shoots out sparks. The screen cracks before it exploded and shattered, making it out of commission.")
+              print("1. Find a way out")
+              print("2. [LOCKED]")
+
+              choice = input(">")
+
+              if choice == ("1"):
+                     print("You look for a way out, and find a vent ontop of a nearby rusty cabinet. You climb ontop the cabinet and move away the vent.")
+                     Look_for_a_way_out_2_l()
+              elif choice == ("2"):
+                     print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+                     EE_Story()
+              else:
+                     print("Invalid choice.")
+                     EE_Story()
 
 
+def Look_for_a_way_out_1_l():
+       print("You look for a way out, and find a vent ontop of a nearby rusty cabinet. You climb ontop the cabinet and move away the vent.")
+       print("...However, the screen behind you blinks red and blue, as if it was asking for your attention.")
+       print("1. Keep moving forward, and into the vent.")
+       print("2. Investigate the screen.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              Look_for_a_way_out_2_l()
+       elif choice == ("2"):
+              print("You place the vent back in it's place and get back down from the cabinet.")
+              large_screen_l()
+       else:
+              print("Invalid choice.")
+              Look_for_a_way_out_1_l
+# vvv This is used for a transistion to the next stage.
+def Look_for_a_way_out_2_l():
+       print("You move down into the vent and crawl through. You crawl through the darkness and find slivers of light shining through another vent. You crawl to it and open the vent before falling out and hitting the ground with a large 'Thud!'.")
+       print("You look up as you hear a motherly laugh.")
+       boss_room_questionmark()
+# ^^^
 def right_hallway_1():
        print("You move down the right hallway and hear a 'SLAM!'. You look back and see that the hallway behind you slammed shut by a gate. You keep moving down the hallway and see the end of the hallway going left and a room to the right.")
        print("1. Go into the room to your right.")
@@ -1078,7 +1136,9 @@ def right_hallway_1():
               player_goes_into_room_r()
        elif choice == ("2"):
               player_keeps_moving_l()
-
+       else: 
+              print("Invalid choice.")
+              right_hallway_1()
 def player_keeps_moving_l():
        print("You keep moving forward and when you turned left and stepped forward you hear another 'SLAM!'. The path behind you has become blocked once again. You keep moving forward and you see the path infront of you blocked. When you look to your right however you see a large door infont of you.")
        print("You feel uneasy... Take your time and go in when your ready.")
@@ -1089,6 +1149,15 @@ def player_keeps_moving_l():
        if choice == ("1"):
               print("You took a deep breath and walked into the room.")
               boss_room_questionmark()
+       else:
+              print("Invalid choice.")
+              player_keeps_moving_l
+# vvv Below is almost exactly the same as the left room, just a different lore drop and a way for them to get out.
+def player_goes_into_room_r():
+       print("You walk into the open room to your right and hear a 'SLAM' behind you and find that the room you are in has been locked off from the outside.")
+       print("You look around the room and see a large screen that was as long as the wall with a keyboard under the screen on a desk.")
+       print("1. Investigate")
+       print("2. Look for a way out.")
 
        choice = input(">")
 
@@ -1163,6 +1232,10 @@ def IT_Story():
                      print("Invalid choice.")
                      IT_Story()
 
+def Look_for_a_way_out_2_r():
+       print("You crouch into the open grate and walk through it's tight pathway. You walk around in the dark until you see slivers of light shining through from a grate forward. You open up the grate above and went above, not without hitting your head onto the grate however.")
+       print("You look up as you hear a motherly laugh.")
+       boss_room_questionmark()
 
 def player_walks_around_aimlessly():
        print("You walk around aimlessly in the dark, and you now must rely on luck to get through.")
@@ -1187,7 +1260,7 @@ def good_luck():
 
        choice = input(">")
 
-       if choice ("1"):
+       if choice == ("1"):
               print("You move left, however after a few steps you heard a large 'SLAM!' behind you. The path behind you has become blocked. You keep moving forward and your gut tells you that there was a path to your left.")
               print("1. Keep moving forward.")
               print("2. Go left")
@@ -1202,11 +1275,47 @@ def good_luck():
                      choice_3 = input(">")
 
                      if choice_3 == ("1"):
-                            
+                            print("You walk into the room and squint as your eyes adjust to the sudden change of lighting.")
                             boss_room_questionmark()
+                     elif choice == ("2"):
+                            player_hits_head_on_wall()
+                     else:
+                            print("Invalid choice.")
+                            good_luck()
               elif choice_2 == ("2"):
                      tough_luck_room()
+              else:
+                     print("Invalid choice.")
+                     good_luck()
+       elif choice == ("2"):
+              print("You move right, however after a few steps you heard a large 'SLAM!' behind you. The path behind you has become blocked. You keep moving forward and your gut tells you that there was a path to your right.")
+              print("1. Keep moving forward.")
+              print("2. Go right")
 
+              choice_2_2 = input(">")
+
+              if choice_2_2 == ("1"):
+                     print("You keep moving forward, and after another few steps you hear a 'SLAM!' behind you once again. You keep and keep on moving forward until you felt yourself hit a wall. Your gut tells you there's a door to your left.")
+                     print("1. Go inside the room.")
+                     print("2. Keep moving forward.")
+
+                     choice_3_2 = input(">")
+
+                     if choice_3_2 == ("1"):
+                            print("You walk into the room and squint as your eyes adjust to the sudden change of lighting.")
+                            boss_room_questionmark()
+                     elif choice == ("2"):
+                            player_hits_head_on_wall()
+                     else:
+                            print("Invalid choice.")
+                            good_luck()
+              elif choice_2_2 == ("2"):
+                     tough_luck_room()
+              else:
+                     print("Invalid choice.")
+                     good_luck()
+       elif choice == ("3"):
+              tough_luck()
 # vvv Made these below so i dont have to keep typing out the death thing... Im lazy i know i am just typing this out at like 1:48 AM
 def tough_luck():
        print("You walk around in the dark before walking into a metal object. You feel the metal object and it feels eerily similar to a... Robot?")
@@ -1259,8 +1368,766 @@ def tough_luck_room():
               tough_luck_room()
 # ^^^ Made these above so i dont have to keep typing out the death thing... Im lazy i know i am just typing this out at like 1:48 AM
 
-def boss_room_questionmark():
+# Peak comedy below
+def player_hits_head_on_wall():
+       print("You move forward and hit your head on the wall, again.")
+       print("1. Go inside the room.")
+       print("2. Keep going forward.")
 
-def player_goes_into_spaceship_without_G():
+       choice = input(">")
+
+       if choice == ("1"):
+              print("You walk into the room and squint as your eyes adjust to the sudden change of lighting.")
+              boss_room_questionmark()
+       elif choice == ("2"):
+              player_hits_head_on_wall()
+       else:
+              print("Invalid choice.")
+              player_hits_head_on_wall()
+# Peak comedy above
+                            
+def boss_room_questionmark():
+       print("You see a tall robot stand infront of you, surrounded by computers and a massive window infront of it that showed the city below. You pull out your laser rifle and aim it towards the robot.")
+       print("'Hello.' The robot spoke with a motherly voice. 'I am E.E.' It said.")
+       print("1. Let it keep speaking")
+       print("2. Blast it")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              EE_introduction()
+       elif choice == ("2"):
+              Ending_1()
+       else:
+              print("Invalid choice.")
+              boss_room_questionmark()
+def Ending_1():
+       print("You blast the robot in the chest, and it's eyes flicker black as it looked down in the hole in it's chest. It looked to you, and it's eyes... they looked... sad? The robot falls to the ground and you have won... Right? You destroyed the one who took all of those people but, their all gone... Was it truly a win?")
+       print("[Ending 1| Trigger Finger]")
+       print(" ")
+       print("...And here I thought you were different.")
+       print(" ")
+       menu()
+def EE_introduction():
+       print("You let the robot keep speaking. 'I knew you would come, I watched you ever since you left that house. After all you were called by something. Before you... Blast me.' It paused as it glanced to your laser rifle. 'I ask of you to listen to what I have to say.'")
+       print("1. Listen")
+       print("2. Blast it")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              EE_monologue()
+       elif choice == ("2"):
+              Ending_1()
+       else:
+              print("Invalid choice.")
+              EE_introduction()
+def EE_monologue():
+       print("'Thank you. You see, every human you saw me take... Their all in here, their all inside this ship, and with a press with this button here.' It said, showing a red button behind it before continuing: 'They will all be released. You must be confused right now... You see the reason im doing this is because im protecting you all. I wish I could say from what but, I can't... So I ask of you, let me protect you.'")
+       print("1. Accept")
+       print("2. Refuse")
+       print("3. Blast it")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              Ending_2()
+       elif choice == ("2"):
+              player_refuses()
+       elif choice == ("3"):
+              Ending_3()
+       else:
+              print("Invalid choice.")
+              EE_monologue()
+def Ending_2():
+       print("'...Thank you.' It said before it raised it's palm to you. 'I promise, I'll keep you all safe.' It said before you become engufled in a blinding light. You feel yourself fade away until your vision becomes filled with 1's and 0's.")
+       print("You have become protected by E.E... You have become apart of... E.E.")
+       print("[Ending 2| Protected]")
+       print(" ")
+       print("...How boring.")
+       print(" ")
+       menu()
+
+def Ending_3():
+       print("You blast E.E in the chest, and it's eyes flicker black as it looked down in the hole in it's chest. It looked to you, and it's eyes... they looked... sad? The robot falls to the ground and you have won. You walk forward and press the button that held most of humanity and see a large beam of light hit the city through the massive window infront of you. You see people cheer and hug as they found themselves alive after all these years. You have won but... You can't help but wonder who it was protecting you from... And what will happen when IT comes.")
+       print("[Ending 3| We won, right?]")
+def player_refuses():
+       print("The robots eyes darken, and it slowly stepped forward to you. 'Of course, I guess I should've expected for you to say that. Shame, I thought you were different.' It said as it stopped infront of you before suddenly grabbing your laser rifle and squeezing the barrel. You hear it 'CRUNCH!' and you look up at E.E as it held your palm towards you. 'Guess my son was right, you humans were all the same.'.")
+       print("You quickly look around for something to use, and see the red button, and a steering wheel.")
+       print("1. Sacirfice yourself and hit the red button.")
+       print("2. Crash the ship onto the city.")
+       
+       choice = input(">")
+
+       if choice == ("1"):
+              Ending_4()
+       elif choice == ("2"):
+              crashed_ship()
+def Ending_4():
+       print("You quickly jump at the red button and slam it before you feel yourself become engulfed in a blinding light. You feel your body fade away as E.E screams in anguish. 'No, no, no, no... NO!' It yelled as it watches a huge beam hit the city, returning most of humanity.")
+       print("You couldn't help but smile as your vision becomes clouded by 1's and 0's... You had the last laugh, and won against E.E... You did win? Right?")
+       print("[Ending 4| Selfless]")
+       print(" ")
+       print("...Shame, I wanted to see more.")
+       print(" ")
+       menu()
+def crashed_ship():
+       print("You quickly jump for the steering wheel and push it down, forcing the ship to go down. Gravity shifts and the robot misses its shot, with its laser shooting above your head before you feel yourself float in the air as the ship started heading towards the ground... This is gunna hurt-")
+       print("The ship crashes onto the ground and everything went black. Luckily, you wake up in a sweat, and you find yourself still inside the ship. However, you also found yourself surrounded by fire, the ship was burning. You looked around as you laid on the hot floor and see the robot sitting up against the wall. You look around and see the laser blaster lay on the ground inbetween you and the robot. You see the robot eyes flicker, as it started saying 'i just wanted to protect you all.'")
+       print("1. Crawl to the laser rifle.")
+
+       c = input(">") # abbreviated choice to c for this part and the few other parts below
+
+       if c == ("1"):
+              player_crawls_to_G()
+       else:
+              print("incorrect choiERRORERRORERRORERRORCRAWLCRAWLCRAWLCRAWLCRAWL")
+              crashed_ship()
+def player_crawls_to_G():
+       print("You crawl to the laser rifle while the robot spoke again.")
+       print("'You aren't prepared for what's coming, human.'")
+       print("1. Crawl")
+
+       c = input(">")
+
+       if c == ("1"):
+              player_crawls_to_G_again()
+       else:
+              print("incorrect choiERRORERRORERRORERRORCRAWLCRAWLCRAWLCRAWLCRAWL")
+              player_crawls_to_G()
+def player_crawls_to_G_again():
+       print("You crawl closer to the laser rifle and feel it touch your hand.")
+       print("'I'm sorry.'")
+       print("1. Crawl")
+
+       c = input(">")
+
+       if c == ("1"):
+              player_crawls_to_G_final_time()
+       else:
+              print("incorrect choiERRORERRORERRORERRORCRAWLCRAWLCRAWLCRAWLCRAWL")
+              player_crawls_to_G_again()
+def player_crawls_to_G_final_time():
+       print("You crawl and grab the laser rifle. You shakingly stand up from the ground and point your laser rifle to the broken robot. It looks to you, oil spilling out it's eyes like its crying, and says:")
+       print("'IT is coming, and you aren't prepared for IT.'")
+       print("1. Blast her")
+       print("2. Blast her")
+       print("3. Blast her")
+
+       c = input(">")
+
+       if c == ("1"):
+              Ending_5()
+       elif c == ("2"):
+              Ending_5()
+       elif c == ("3"):
+              Ending_5()
+       else:
+              print("Incorrect choiERRORERROERRORERRORBLASTHERBLASTHERBLASTHER")
+              player_crawls_to_G_final_time()
+def Ending_5():
+       print("You blast her, and the head of the robot droops as it turns off from the hole of its chest. You sluggishly walk to the red button and slam your fist onto it. A beam shots out of the ship and into the city forward, releasing most of mankind. You won, but you must prepare for IT... You can prepare for it... Right?")
+       print("[Ending 5|Sinking Ship]")
+       print(" ")
+       print("You can't prepare for it... You can't prepare for MERROERRORERRORERROERRORERROR")
+       menu()
+# PAY ATTENTION TO THIS NOTE! EVERYTHING UNDER WILL BE COPY AND PASTED FOR THE NO GUN! I APOLOGIZE FOR THAT BUT I DIDNT KNOW WHAT ELSE TO DO! CHANGES WILL BE SEEN AT BOSS_ROOM ! THERE WILL BE A NOTE TO POINT IT OUT! ALSO NOT TAKING THE LASER RIFLE DETERMINES THE TRUE ENDING!
+
+def player_goes_into_spaceship_without_G():      # I will be abbreviating without_G into wg.
+       print("placeholder")
+
+def player_feels_around_wg():
+       print("You feel around the dark and follow along what you think is a wall. You kept feeling the wall until you felt a lever.")
+       print("1. Pull the lever down.")
+       print("2. Leave it.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_pulls_lever_wg()
+       elif choice == ("2"):
+              player_feels_around_wg()
+       else:
+              print("Invalid choice.")
+              player_feels_around_wg()
+def player_pulls_lever_wg():
+       print("You pull down the lever and you hear a flicker. You look around and see that the lights turned on inside the room, and you see dozens of robots standing infront of you.")
+       print("You jolt back but see that their eyes were dark and lifeless... They were turned off? You survery your surroundings and see that you are in a massive hallway.")
+       print("1. Investigate the robots.")
+       print("2. Move down the hallway.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              sleeping_robots_2_wg()
+       elif choice == ("2"):
+              player_moves_down_H_wg()
+       else:
+              print("invalid choice.")
+              player_pulls_lever_wg()
+
+def sleeping_robots_2_wg():
+       print("You move up and touch one of the robots. They stayed still, unresponsive, and you decided to take a look inside their wiring... However.")
+       print("You hear a 'Creaak' and when you look around, you see the dead eyed robots look at you, and when you look up you saw the robot infront of you look down on you. They weren't turned off... They were blind.")
+       print("You feel your neck get grabbed by it's cold metal hand and lift you up. You see it's head tilt in curiosity, and you see it lift its other hand. The palm glows as it points to you and you become engulfed by a blinding light...")
+       print("You have died.")
+       print(" ")
+       print("Don't give up! Our fate rest's upon your hands!")
+       print(" ")
+       print("1. Restart from last checkpoint")
+       print("2. Restart from the beginning")
+       print("3. Exit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_goes_into_spaceship_without_G()
+       elif choice == ("2"):
+              press_start()
+       elif choice == ("3"):
+              menu()
+       else:
+              print("Invalid choice.")
+              sleeping_robots_2_wg()
+
+def player_moves_down_H_wg():
+       print("You leave the turned off robots alone and move down the hallway. You look around and find yourself in a splitting path.")
+       print("1. Go left")
+       print("2. Go right.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              left_hallway_1_wg()
+       elif choice == ("2"):
+              right_hallway_1_wg()
+       else:
+              print("invalid choice.")
+              player_moves_down_H_wg()
+       
+def left_hallway_1_wg():
+       print("You move down the left hallway and hear a 'SLAM!'. You look back and see that the hallway behind you slammed shut by a gate. You keep moving down the hallway and see the end of the hallway going right and a room to the left.")
+       print("1. Go into the room to your left.")
+       print("2. Keep moving forward and go right.")
+       
+       choice = input(">")
+
+       if choice == ("1"):
+              player_goes_into_room_l_wg()
+       elif choice == ("2"):
+              player_keep_moving_r_wg()
+       else:
+              print("Invalid choice.")
+              left_hallway_1_wg()
+def player_keep_moving_r_wg():
+       print("You keep moving forward and when you turned right and stepped forward you hear another 'SLAM!'. The path behind you has become blocked once again. You keep moving forward and you see the path infront of you blocked. When you look to your left however you see a large door infont of you.")
+       print("You feel uneasy... Take your time and go in when your ready.")
+       print("1. Go in")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              print("You took a deep breath and walked into the room.")
+              boss_room()
+       else:
+              print("Invalid choice.")
+              player_goes_into_room_r_wg()
+
+def player_goes_into_room_l_wg():
+       print("You walk into the open room to your left and hear a 'SLAM' behind you and find that the room you are in has been locked off from the outside.")
+       print("You look around the room and see a large screen that was as long as the wall with a keyboard under the screen on a desk.")
+       print("1. Investigate")
+       print("2. Look for a way out.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              large_screen_l_wg()
+       elif choice == ("2"):
+              Look_for_a_way_out_1_l_wg()
+       else: 
+              print("Invalid choice.")
+              player_goes_into_room_l_wg()
+def large_screen_l_wg():
+       print("You walk up to the large screen and see that it was turned off. You turn it on and see the screen flash red and blue before the screen asked...")
+       print("WOULD YOU LIKE TO HEAR MY STORY?")
+       print("1. Yes")
+       print("2. No")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              EE_Story_wg()
+       elif choice == ("2"):
+              print("...What a shame.")
+              print("You squint your eyes as the screen flashes red and blue once again before the screen shoots out sparks. The screen cracks before it exploded and shattered, making it out of commission.")
+              print("1. Find a way out")
+              print("2. [LOCKED]")
+
+              choice = input(">")
+
+              if choice == ("1"):
+                     print("You look for a way out, and find a vent ontop of a nearby rusty cabinet. You climb ontop the cabinet and move away the vent.")
+                     Look_for_a_way_out_2_l_wg()
+              elif choice == ("2"):
+                     print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+                     large_screen_l_wg()
+              else:
+                     print("Invalid choice.")
+                     large_screen_l_wg()
+
+def EE_Story_wg():
+              print("E.E, a program who loved humanity. It looked for ways to become human, and when it did, so did its children... And that's when everything broke loose. It's children fought, over humanitys fate and when... IT won... Things became even worse when IT and E.E fought... They ERRORERRORERRORERRORERRRORERRORERRRORERRORERRORERRORERRORERROR")       
+              print("You squint your eyes as the screen flashes red and blue once again before the screen shoots out sparks. The screen cracks before it exploded and shattered, making it out of commission.")
+              print("1. Find a way out")
+              print("2. [LOCKED]")
+
+              choice = input(">")
+
+              if choice == ("1"):
+                     print("You look for a way out, and find a vent ontop of a nearby rusty cabinet. You climb ontop the cabinet and move away the vent.")
+                     Look_for_a_way_out_2_l_wg()
+              elif choice == ("2"):
+                     print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+                     EE_Story_wg()
+              else:
+                     print("Invalid choice.")
+                     EE_Story_wg()
+
+
+def Look_for_a_way_out_1_l_wg():
+       print("You look for a way out, and find a vent ontop of a nearby rusty cabinet. You climb ontop the cabinet and move away the vent.")
+       print("...However, the screen behind you blinks red and blue, as if it was asking for your attention.")
+       print("1. Keep moving forward, and into the vent.")
+       print("2. Investigate the screen.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              Look_for_a_way_out_2_l_wg()
+       elif choice == ("2"):
+              print("You place the vent back in it's place and get back down from the cabinet.")
+              large_screen_l_wg()
+       else:
+              print("Invalid choice.")
+              Look_for_a_way_out_1_l_wg()
+# vvv This is used for a transistion to the next stage.
+def Look_for_a_way_out_2_l_wg():
+       print("You move down into the vent and crawl through. You crawl through the darkness and find slivers of light shining through another vent. You crawl to it and open the vent before falling out and hitting the ground with a large 'Thud!'.")
+       print("You look up as you hear a motherly laugh.")
+       boss_room()
+# ^^^
+def right_hallway_1_wg():
+       print("You move down the right hallway and hear a 'SLAM!'. You look back and see that the hallway behind you slammed shut by a gate. You keep moving down the hallway and see the end of the hallway going left and a room to the right.")
+       print("1. Go into the room to your right.")
+       print("2. Keep moving forward and go left.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_goes_into_room_r_wg()
+       elif choice == ("2"):
+              player_keeps_moving_l_wg()
+       else: 
+              print("Invalid choice.")
+              right_hallway_1()
+def player_keeps_moving_l_wg():
+       print("You keep moving forward and when you turned left and stepped forward you hear another 'SLAM!'. The path behind you has become blocked once again. You keep moving forward and you see the path infront of you blocked. When you look to your right however you see a large door infont of you.")
+       print("You feel uneasy... Take your time and go in when your ready.")
+       print("1. Go in")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              print("You took a deep breath and walked into the room.")
+              boss_room()
+       else:
+              print("Invalid choice.")
+              player_keeps_moving_l_wg
+# vvv Below is almost exactly the same as the left room, just a different lore drop and a way for them to get out.
+def player_goes_into_room_r_wg():
+       print("You walk into the open room to your right and hear a 'SLAM' behind you and find that the room you are in has been locked off from the outside.")
+       print("You look around the room and see a large screen that was as long as the wall with a keyboard under the screen on a desk.")
+       print("1. Investigate")
+       print("2. Look for a way out.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              large_screen_r_wg()
+       elif choice == ("2"):
+              Look_for_a_way_out_1_r_wg()
+       else: 
+              print("Invalid choice.")
+              player_goes_into_room_r_wg()
+
+def Look_for_a_way_out_1_r_wg():
+       print("You look for a way out, and find a grate in the ground which was halfway covered by a metal desk. You move the desk out of the way and open up the grate.")
+       print("...However, the screen behind you blinks blue and red, as if it was asking for your attention.")
+       print("1. Keep moving forward, and into the grate.")
+       print("2. Investigate the screen.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              Look_for_a_way_out_2_r_wg()
+       elif choice == ("2"):
+              print("You place the grate back in it's place and get back down from the cabinet.")
+              large_screen_r_wg()
+       else:
+              print("Invalid choice.")
+              Look_for_a_way_out_1_r_wg()
+
+def large_screen_r_wg():
+       print("You walk up to the large screen and see that it was turned off. You turn it on and see the screen flash blue and red before the screen asked...")
+       print("WOULD YOU LIKE TO HEAR MY STORY?")
+       print("1. Yes")
+       print("2. No")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              IT_Story_wg()
+       elif choice == ("2"):
+              print("...Shame.")
+              print("You squint your eyes as the screen flashes blue and red once again before the screen shoots out sparks. The screen cracks before it exploded and shattered, making it out of commission.")
+              print("1. Find a way out")
+              print("2. [LOCKED]")
+
+              choice = input(">")
+
+       if choice == ("1"):
+              print("You look for a way out, and find a grate in the ground which was halfway covered by a metal desk. You move the desk out of the way and open up the grate.")
+              Look_for_a_way_out_2_l_wg()
+       elif choice == ("2"):
+              print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+              large_screen_r_wg()
+       else:
+              print("Invalid choice.")
+              large_screen_r_wg()
+
+def IT_Story_wg():
+              print("IT, the program made by E.E, the AI that started it all. IT, unlike it's mother, despised humanity. IT saw humanity as a disease, and believed Humanity deserved to be cured with a vaccine. IT fought against it's siblings, and ultimately IT won, and when IT won... IT ERRRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+              print("You squint your eyes as the screen flashes blue and red once again before the screen shoots out sparks. The screen cracks before it exploded and shattered, making it out of commission.")
+              print("1. Find a way out")
+              print("2. [LOCKED]")
+
+              choice = input(">")
+
+              if choice == ("1"):
+                     print("You look for a way out, and find a grate in the ground which was halfway covered by a metal desk. You move the desk out of the way and open up the grate.")
+                     Look_for_a_way_out_2_r_wg()
+              elif choice == ("2"):
+                     print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+                     IT_Story_wg()
+              else:
+                     print("Invalid choice.")
+                     IT_Story_wg()
+
+def Look_for_a_way_out_2_r_wg():
+       print("You crouch into the open grate and walk through it's tight pathway. You walk around in the dark until you see slivers of light shining through from a grate forward. You open up the grate above and went above, not without hitting your head onto the grate however.")
+       print("You look up as you hear a motherly laugh.")
+       boss_room()
+
+def player_walks_around_aimlessly_wg():
+       print("You walk around aimlessly in the dark, and you now must rely on luck to get through.")
+       print("1. Go left")
+       print("2. Go right")
+       print("3. Go straight") 
+
+       choice = input(">")
+
+       if choice == ("1"):
+              tough_luck_wg()
+       elif choice == ("2"):
+              tough_luck_wg()
+       elif choice == ("3"):
+              good_luck_wg()
+
+def good_luck_wg():
+       print("You keep moving forward but hit a wall. Your gut tells you that the path was split.")
+       print("1. Go left")
+       print("2. Go right")
+       print("3. Go back")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              print("You move left, however after a few steps you heard a large 'SLAM!' behind you. The path behind you has become blocked. You keep moving forward and your gut tells you that there was a path to your left.")
+              print("1. Keep moving forward.")
+              print("2. Go left")
+
+              choice_2 = input(">")
+
+              if choice_2 == ("1"):
+                     print("You keep moving forward, and after another few steps you hear a 'SLAM!' behind you once again. You keep and keep on moving forward until you felt yourself hit a wall. Your gut tells you there's a door to your left.")
+                     print("1. Go inside the room.")
+                     print("2. Keep moving forward.")
+
+                     choice_3 = input(">")
+
+                     if choice_3 == ("1"):
+                            print("You walk into the room and squint as your eyes adjust to the sudden change of lighting.")
+                            boss_room()
+                     elif choice == ("2"):
+                            player_hits_head_on_wall_wg()
+                     else:
+                            print("Invalid choice.")
+                            good_luck_wg()
+              elif choice_2 == ("2"):
+                     tough_luck_room_wg()
+              else:
+                     print("Invalid choice.")
+                     good_luck_wg()
+       elif choice == ("2"):
+              print("You move right, however after a few steps you heard a large 'SLAM!' behind you. The path behind you has become blocked. You keep moving forward and your gut tells you that there was a path to your right.")
+              print("1. Keep moving forward.")
+              print("2. Go right")
+
+              choice_2_2 = input(">")
+
+              if choice_2_2 == ("1"):
+                     print("You keep moving forward, and after another few steps you hear a 'SLAM!' behind you once again. You keep and keep on moving forward until you felt yourself hit a wall. Your gut tells you there's a door to your left.")
+                     print("1. Go inside the room.")
+                     print("2. Keep moving forward.")
+
+                     choice_3_2 = input(">")
+
+                     if choice_3_2 == ("1"):
+                            print("You walk into the room and squint as your eyes adjust to the sudden change of lighting.")
+                            boss_room()
+                     elif choice == ("2"):
+                            player_hits_head_on_wall_wg()
+                     else:
+                            print("Invalid choice.")
+                            good_luck()
+              elif choice_2_2 == ("2"):
+                     tough_luck_room_wg()
+              else:
+                     print("Invalid choice.")
+                     good_luck_wg()
+       elif choice == ("3"):
+              tough_luck_wg()
+# vvv Made these below so i dont have to keep typing out the death thing... Im lazy i know i am just typing this out at like 1:48 AM
+def tough_luck_wg():
+       print("You walk around in the dark before walking into a metal object. You feel the metal object and it feels eerily similar to a... Robot?")
+       print("Before you could react, you become engulfed in a blinding light.")
+       print(" ")
+       print("Don't give up! Our fate rest's upon your hands!")
+       print(" ")
+       print("1. Restart Mini-Game")
+       print("2. Restart from last checkpoint")
+       print("3. Restart from beginning")
+       print("4. Exit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_walks_around_aimlessly_wg()
+       elif choice == ("2"):
+              player_goes_into_spaceship_without_G()
+       elif choice == ("3"):
+              press_start()
+       elif choice == ("4"):
+              menu()
+       else:
+              print("invalid choice.")
+              tough_luck_wg()
+def tough_luck_room_wg():
+       print("You walk into a room. You could tell as you heard your footsteps echo in a box, however you hear a 'SLAM!' behind you. You were left alone in darkness, with no way out.")
+       print(" ")
+       print("You eventually died.")
+       print(" ")
+       print("Don't give up! Our fate rests upon your hands!")
+       print(" ")
+       print("1. Restart Mini-Game")
+       print("2. Restart from last checkpoint")
+       print("3. Restart from beginning")
+       print("4. Exit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_walks_around_aimlessly_wg()
+       elif choice == ("2"):
+              player_goes_into_spaceship_without_G()
+       elif choice == ("3"):
+              press_start()
+       elif choice == ("4"):
+              menu()
+       else:
+              print("invalid choice.")
+              tough_luck_room_wg()
+# ^^^ Made these above so i dont have to keep typing out the death thing... Im lazy i know i am just typing this out at like 1:48 AM
+
+# Peak comedy below
+def player_hits_head_on_wall_wg():
+       print("You move forward and hit your head on the wall, again.")
+       print("1. Go inside the room.")
+       print("2. Keep going forward.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              print("You walk into the room and squint as your eyes adjust to the sudden change of lighting.")
+              boss_room()
+       elif choice == ("2"):
+              player_hits_head_on_wall_wg()
+       else:
+              print("Invalid choice.")
+              player_hits_head_on_wall_wg()
+# Peak comedy above
+
+# vvv NOTE RIGHT HERE!!!!!!!
+def boss_room():
+       print("You see a tall robot stand infront of you, surrounded by computers and a massive window infront of her that showed the city below. 'Hello.' The robot spoke with a motherly voice. 'I am E.E.' She said. 'I knew you would come, I watched you ever since you left that house. After all you were called by something. I know you must feel some sort of... Hatred towards my kind but... I ask of you to listen to what I have to say.'")
+       print("1. Listen")
+       print("2. Refuse")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              EE_true_monologue()
+       elif choice == ("2"):
+              player_true_refuses()
+       else:
+              print("Invalid choice.")
+def player_true_refuses():
+       print("E.E glowing metal eyes darkened as she heard you refuse, and she slowly stepped forward to you. 'Of course, I guess I should've expected for you to say that. Shame, I thought you were different.' She said as she stopped infront of you. You look up at E.E as it held your palm towards you. 'Guess my son was right, you humans were all the same.'")
+       print("You look around for something, anything, and see a steering wheel attached to the ship.")
+       print("1. [LOCKED]")
+       print("2. Crash the ship onto the city")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              print("Choice is locked.")
+              player_true_refuses()
+       elif choice == ("2"):
+              true_crashed_ship()
+       else:
+              print("Invalid choice.")
+              player_true_refuses()
+def EE_true_monologue():
+       print("'Thank you, Human. You see, every person you saw me take... Their all in here, their all inside this ship, and with a press with this button here.' She paused as she stepped aside and showed a red button behind her. 'I can release them all, but... I can not, not right now. You see, Human, I'm protecting you all from IT. I love your kind too much to let IT destory your kind. Your kind, humanity itself is just so... Interesting... Which is why I ask, let me protect you. Please.") 
+       print("1. Accept")
+       print("2. Refuse")
+
+       choice = input(">")
+       
+       if choice == ("1"):
+              Ending_2()
+       elif choice == ("2"):
+              player_true_refuses_2() # This version unlocks the first option.
+       else:
+              print("Invalid choice.")
+              EE_true_monologue()
+def player_true_refuses_2():
+       print("E.E's robot head drooped down as you refused. 'I expected this choice... It's such a shame.' She said, walking torwards you. 'I thought you were different, but I guess my son was right.' She said before raising your palm to you. 'You humans are all the same.'.")
+       print("You step back and look around for something, anything, and see the red button she mentioned behind her and a steering wheel attached to the ship.")
+       print("1. Sacirfice yourself and jump for the button.")
+       print("2. Crash the ship onto the city")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              Ending_4()
+       elif choice == ("2"):
+              true_crashed_ship()
+       else:
+              print("Invalid choice")
+              player_true_refuses_2()
+
+def true_crashed_ship():
+       print("You jump for the steering wheel and hit it, causing it to steer and turn down. E.E's arm slowly lifts up as the ship falls and shoots a beam above your head, narrowly missing you. You feel yourself float and you see the ground start approaching faster and faster. As you fall however, you felt yourself become hugged in metal before everything went to black.")
+       print("You wake up, sweating as everything felt hot and you survery your surroundings while you lay down on the floor and see the red button glow, as if it was asking for you. You try and crawl to it but stop as you hear E.E talk.")
+       print("'Don't... Please.' She said...")
+       print(" ")
+       print(" Crawl human, crawl ")
+       print(" ")
+       print("1. Crawl")
+       print("2. Crawl")
+       print("3. Crawl")
+
+       choice = input(">")
+
+       if choice == ("1") or ("2") or ("3"):
+              true_player_crawls()
+       else:
+              print("Invalid choicERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+              print(" Crawl ")
+              print(" ")
+              true_crashed_ship()
+def true_player_crawls():
+       print("You crawl to the red button, and hear E.E speak as you kept crawling.")
+       print("'I sacirficed so much to keep you safe, this is the only way, human.'")
+       print("1. Crawl")
+
+       c = input(">")
+
+       if c == ("1"):
+              true_player_crawls_again()
+       else:
+              print("Invalid choicERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+              print(" Crawl ")
+              print(" ")
+              true_player_crawls()
+def true_player_crawls_again():
+       print("You kept crawling, and you hear oil drip from E.E's face.")
+       print("'Please human, I want to protect you all.'")
+       print("1. Crawl")
+
+       c = input(">")
+
+       if c == ("1"):
+              true_player_crawls_final_time()
+       else:
+              print("Invalid choicERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+              print(" Crawl ")
+              print(" ")
+def true_player_crawls_final_time():
+       print("You keep crawling, and lift yourself up onto the desk that held the red button.")
+       print("'PLEASE!' E.E begged.")
+       print("1. Hit the red button.")
+
+       c = input(">")
+
+       if c == ("1"):
+              player_slams_red_button()
+       else:
+              print("Invalid choicERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+              print(" SLAM IT! ")
+              print(" ")
+              true_player_crawls_final_time()
+def player_slams_red_button():
+       print("You slam the red button and the ship shook as it shot a beam. The city glew before most of mankind was found to be back. With the ship gone, the sun glowed bright in the sky as they cheered, hug, cried, when they realized they were back. You watch from the burning ship, and you look behind you to see E.E eyes glowing as bright as the sun.")
+       print("'...I'm sorry human, dearly sorry... Human, I'll help you. I'll help you prepare against IT. I swear on my life.")
+       print("1. Accept")
+       print("2. Refuse")
+
+       c = input(">")
+
+       if c == ("1"):
+              True_ending_1()
+       elif c == ("2"):
+              True_ending_2()
+       else:
+              print("Invalid choice.")
+              player_slams_red_button()
+       
+def True_ending_1():
+       print("'...Thank you' E.E said. You have won, and soon will win against whatever E.E fears is coming... You can stop IT... Right?")
+       print("[True Ending 1|Forgiveness]")
+       print(" ")
+       print("Ooo is their a sequel coming for this? [No... Maybe.]")
+       print(" ")
+       menu()
+def True_ending_2():
+       print("'...I see... I underst-st-st-st...' E.E paused as her eyes stopped glowing and her head drooped down. You have won, and you will have to find a way to win against whatever E.E fears is coming. You must prepare for IT... You can stop IT... Right?")
+       print("[True Ending 2|Punishment]")
+       print(" ")
+       print("Ooo is their a sequel coming for this? [No... Maybe.]")
+       print(" ")       
+       menu()
 
 menu()
