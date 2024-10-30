@@ -1090,10 +1090,174 @@ def player_keeps_moving_l():
               print("You took a deep breath and walked into the room.")
               boss_room_questionmark()
 
-def player_goes_into_room_r():
+       choice = input(">")
+
+       if choice == ("1"):
+              large_screen_r()
+       elif choice == ("2"):
+              Look_for_a_way_out_1_r()
+       else: 
+              print("Invalid choice.")
+              player_goes_into_room_r()
+
+def Look_for_a_way_out_1_r():
+       print("You look for a way out, and find a grate in the ground which was halfway covered by a metal desk. You move the desk out of the way and open up the grate.")
+       print("...However, the screen behind you blinks blue and red, as if it was asking for your attention.")
+       print("1. Keep moving forward, and into the grate.")
+       print("2. Investigate the screen.")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              Look_for_a_way_out_2_r()
+       elif choice == ("2"):
+              print("You place the grate back in it's place and get back down from the cabinet.")
+              large_screen_r()
+       else:
+              print("Invalid choice.")
+              Look_for_a_way_out_1_r
+
+def large_screen_r():
+       print("You walk up to the large screen and see that it was turned off. You turn it on and see the screen flash blue and red before the screen asked...")
+       print("WOULD YOU LIKE TO HEAR MY STORY?")
+       print("1. Yes")
+       print("2. No")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              IT_Story()
+       elif choice == ("2"):
+              print("...Shame.")
+              print("You squint your eyes as the screen flashes blue and red once again before the screen shoots out sparks. The screen cracks before it exploded and shattered, making it out of commission.")
+              print("1. Find a way out")
+              print("2. [LOCKED]")
+
+              choice = input(">")
+
+       if choice == ("1"):
+              print("You look for a way out, and find a grate in the ground which was halfway covered by a metal desk. You move the desk out of the way and open up the grate.")
+              Look_for_a_way_out_2_l()
+       elif choice == ("2"):
+              print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+              large_screen_r()
+       else:
+              print("Invalid choice.")
+              large_screen_r()
+
+def IT_Story():
+              print("IT, the program made by E.E, the AI that started it all. IT, unlike it's mother, despised humanity. IT saw humanity as a disease, and believed Humanity deserved to be cured with a vaccine. IT fought against it's siblings, and ultimately IT won, and when IT won... IT ERRRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+              print("You squint your eyes as the screen flashes blue and red once again before the screen shoots out sparks. The screen cracks before it exploded and shattered, making it out of commission.")
+              print("1. Find a way out")
+              print("2. [LOCKED]")
+
+              choice = input(">")
+
+              if choice == ("1"):
+                     print("You look for a way out, and find a grate in the ground which was halfway covered by a metal desk. You move the desk out of the way and open up the grate.")
+                     Look_for_a_way_out_2_r()
+              elif choice == ("2"):
+                     print("ERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERRORERROR")
+                     IT_Story()
+              else:
+                     print("Invalid choice.")
+                     IT_Story()
 
 
 def player_walks_around_aimlessly():
+       print("You walk around aimlessly in the dark, and you now must rely on luck to get through.")
+       print("1. Go left")
+       print("2. Go right")
+       print("3. Go straight") 
+
+       choice = input(">")
+
+       if choice == ("1"):
+              tough_luck()
+       elif choice == ("2"):
+              tough_luck()
+       elif choice == ("3"):
+              good_luck()
+
+def good_luck():
+       print("You keep moving forward but hit a wall. Your gut tells you that the path was split.")
+       print("1. Go left")
+       print("2. Go right")
+       print("3. Go back")
+
+       choice = input(">")
+
+       if choice ("1"):
+              print("You move left, however after a few steps you heard a large 'SLAM!' behind you. The path behind you has become blocked. You keep moving forward and your gut tells you that there was a path to your left.")
+              print("1. Keep moving forward.")
+              print("2. Go left")
+
+              choice_2 = input(">")
+
+              if choice_2 == ("1"):
+                     print("You keep moving forward, and after another few steps you hear a 'SLAM!' behind you once again. You keep and keep on moving forward until you felt yourself hit a wall. Your gut tells you there's a door to your left.")
+                     print("1. Go inside the room.")
+                     print("2. Keep moving forward.")
+
+                     choice_3 = input(">")
+
+                     if choice_3 == ("1"):
+                            
+                            boss_room_questionmark()
+              elif choice_2 == ("2"):
+                     tough_luck_room()
+
+# vvv Made these below so i dont have to keep typing out the death thing... Im lazy i know i am just typing this out at like 1:48 AM
+def tough_luck():
+       print("You walk around in the dark before walking into a metal object. You feel the metal object and it feels eerily similar to a... Robot?")
+       print("Before you could react, you become engulfed in a blinding light.")
+       print(" ")
+       print("Don't give up! Our fate rest's upon your hands!")
+       print(" ")
+       print("1. Restart Mini-Game")
+       print("2. Restart from last checkpoint")
+       print("3. Restart from beginning")
+       print("4. Exit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_walks_around_aimlessly()
+       elif choice == ("2"):
+              player_goes_into_spaceship_with_G()
+       elif choice == ("3"):
+              press_start()
+       elif choice == ("4"):
+              menu()
+       else:
+              print("invalid choice.")
+              tough_luck()
+def tough_luck_room():
+       print("You walk into a room. You could tell as you heard your footsteps echo in a box, however you hear a 'SLAM!' behind you. You were left alone in darkness, with no way out.")
+       print(" ")
+       print("You eventually died.")
+       print(" ")
+       print("Don't give up! Our fate rests upon your hands!")
+       print(" ")
+       print("1. Restart Mini-Game")
+       print("2. Restart from last checkpoint")
+       print("3. Restart from beginning")
+       print("4. Exit")
+
+       choice = input(">")
+
+       if choice == ("1"):
+              player_walks_around_aimlessly()
+       elif choice == ("2"):
+              player_goes_into_spaceship_with_G()
+       elif choice == ("3"):
+              press_start()
+       elif choice == ("4"):
+              menu()
+       else:
+              print("invalid choice.")
+              tough_luck_room()
+# ^^^ Made these above so i dont have to keep typing out the death thing... Im lazy i know i am just typing this out at like 1:48 AM
 
 def boss_room_questionmark():
 
